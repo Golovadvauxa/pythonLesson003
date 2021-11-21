@@ -46,10 +46,10 @@ store = {
 #         подсчет стоимости товара
 #     вывод на консоль количества и стоимости товара на складе
 
-# TODO здесь ваш код
-
-
-
-
-
-
+for index in goods:
+    cost = 0
+    count = 0
+    for items in store[goods[index]]:
+        count += items['quantity']
+        cost += items['quantity'] * items['price']
+    print(index, count, 'шт. стоимостью', cost, 'руб.')
