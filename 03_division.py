@@ -10,4 +10,12 @@
 
 a, b = 179, 37
 
-# TODO здесь ваш код
+result = 1
+i = 1
+while result <= a:
+    result = b * i
+    if b * (i + 1) > a:
+        break
+    i += 1
+remainder_of_division = a - result
+print('Результат деления нацело', i, '; остаток от деления', remainder_of_division)
