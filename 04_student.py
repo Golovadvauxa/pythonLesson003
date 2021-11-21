@@ -11,4 +11,11 @@
 
 educational_grant, expenses = 10000, 12000
 
-# TODO здесь ваш код
+i = 0
+necessary_cash = expenses - educational_grant
+for i in range(10):
+    if i == 0:
+        continue
+    expenses += expenses * 0.03
+    necessary_cash += expenses - educational_grant
+print('Студенту надо попросить', round(necessary_cash, 2), 'руб.')
